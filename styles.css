@@ -69,7 +69,7 @@ nav ul a {
 
 nav ul a:hover {
   color:#009ca6;
-  transition: background: 1s;
+  /*transition: background: 1s;*/
 }
 .main {
   margin:16px;

@@ -1,5 +1,5 @@
 * { 
-  font-family: Sans-Serif;
+font-family: "Roboto", Sans-serif;;
 }
 
 body{
@@ -14,62 +14,80 @@ body{
 	color: #5C6AC4;
 }
 .logo-runner{
-    width: 98.6%;
-    background: #fff;
-    height: auto;
-    margin:8px;
+    width: 100%;
+    background-color: #fff;
+    min-height: 90px;
+    margin:0 auto;
     margin-bottom:0;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-
+.logo-runner a {
+  text-decoration: none;
+}
 .logo {
-  width:50%;
-  height:auto;
-  margin:8px;
-  background-color: #FFF;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  margin: 8px;
 }
 nav { 
   background: #003a96;
-  height: 80px; 
+  min-height: 80px; 
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title-text {
-  font-size: clamp(0.35rem, 5vw, 40px);
-  float:left;
-   padding: 0 clamp(0.45rem, 5vw, 30px);
-   margin:15px;
-   color:#FFF;
+  font-size: clamp(0.6rem, 3vw, 1.5rem);
+  padding: 0 clamp(0.3rem, 1vw, 1rem);
+  color: #003A96;
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 nav ul {
-  height: 80px;
   list-style: none;
-  margin: 0 auto; 
+  margin: 0; 
   padding: 0;
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
 }
 
 nav ul li {
-  font-size: clamp(0.35rem, 5vw, 30px);
+  font-size: clamp(0.5rem, 3vw, 1.2rem);
   color: #FFF;
-  display: inline-block; 
-  height: 100%;
-  line-height: 80px; 
   list-style: none;
-  padding: 0 clamp(0.45rem, 3vw, 20px);
-  transition: background .5s; 
-  vertical-align: middle;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+  transition: background-color 0.3s ease; 
+  white-space: nowrap;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 
 nav ul a {
   color: #FFF;
-    text-decoration: none;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 nav ul a:hover {
   color:#009ca6;
-  /*transition: background: 1s;*/
 }
 .main {
   margin:16px;
@@ -79,21 +97,28 @@ nav ul a:hover {
   overflow:auto;
 }
 
+.vid-title {
+  white-space: pre-line;
+  clear: both;
+}
+
 .vid1, .vid2, .vid3 {
   width:100%;
   height:315px;
- 
-  
+  clear: both;
 }
 
 .vid1 iframe, .vid2 iframe,.vid3 iframe {
   float:left;
+  width: clamp(385px, 45%, 45%);
+  height: clamp(445px, 45%, 45%);
 }
 .vid1-text, .vid2-text, .vid3-text {
   width:50%;
   float:left;
   vertical-align: middle;
   margin:8px;
+  margin-top: 10%;
   padding:auto;
   
 }

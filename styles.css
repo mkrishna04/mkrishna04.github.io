@@ -5,13 +5,15 @@ font-family: "Roboto", Sans-serif;;
 body{
   padding: 0px;
   margin:0;
-  
+
   background-image: url('https://previews.123rf.com/images/rouslan/rouslan2310/rouslan231001592/215769718-modern-laboratory-interior-of-modern-research-laboratory-science-and-technology-theme.jpg');
-  
+
   box-sizing: border-box;
 }
 .title {
 	color: #5C6AC4;
+  text-align: center;
+  font-weight: 300;
 }
 .logo-runner{
     width: 100%;

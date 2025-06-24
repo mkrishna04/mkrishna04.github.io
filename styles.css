@@ -109,6 +109,14 @@ nav ul a:hover {
   overflow:auto;
 }
 
+.divider {
+  width:97%;
+  height:1px;
+  color: grey;
+  background-color: grey;
+  align-items: center;
+}
+
 .vid-title {
   white-space: pre-line;
   clear: both;
@@ -130,7 +138,7 @@ nav ul a:hover {
   float:left;
   vertical-align: middle;
   margin:8px;
-  margin-top: 10%;
+  margin-top: 5%;
   padding:auto;
   
 }

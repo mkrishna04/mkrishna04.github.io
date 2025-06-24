@@ -12,9 +12,14 @@ body{
 }
 .title {
 	color: #5C6AC4;
-  text-align: center;
+  font-size:xx-large;
   font-weight: 300;
 }
+
+#LandingTitle{
+text-align: center;
+}
+
 .logo-runner{
     width: 100%;
     background-color: #fff;

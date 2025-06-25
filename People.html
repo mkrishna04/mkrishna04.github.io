@@ -74,12 +74,12 @@
     <th>Affiliation</th>
 </tr>
 <tr>
-    <td><a href="javascript:void(0)" onclick="openModal('Images/Alex.webp', 'Alex Jirayr Balikian')">Alex Jirayr Balikian</a></td>
+    <td><a href="javascript:void(0)" onclick="openModal('Images/Alex.webp', 'Alex Balikian')">Alex Balikian</a></td>
     <td>Summer Student</td>
     <td>Tufts University, MA</td>
 </tr>
 <tr>
-    <td><a href="javascript:void(0)" onclick="openModal('Images/Florencia.webp', 'Florencia Sendic Rodriguez')">Florencia Sendic Rodriguez</a></td>
+    <td><a href="javascript:void(0)" onclick="openModal('Images/Florencia.webp', 'Florencia Rodriguez')">Florencia Rodriguez</a></td>
     <td>Research Fellow</td>
     <td>University of Uruguay, Uruguay</td>
 </tr>
@@ -88,7 +88,11 @@
     <td>Summer Student</td>
     <td>UMass Amherst, MA</td>
 </tr>
-
+<tr>
+    <td><a href="javascript:void(0)" onclick="openModal('Images/Tommy.webp', 'Tommy Lampert', 'https://www.linkedin.com/in/tommy-lampert-86ab55317/')">Tommy Lampert</a></td>
+    <td>Summer Student</td>
+    <td>UMiami, Oxford, OH</td>
+</tr>
 </table>
 
 <!-- Modal for image display -->
@@ -96,9 +100,9 @@
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <img id="modalImage" src="" alt="">
-    <h3 id="modalCaption"></h3>
+    <a id="modalCaption" href="" target="_blank"></a>
   </div>
-</div>  
+</div>
   <div class = divider></div>
 
 </div>
@@ -106,7 +110,7 @@
 
 
 <script>
-function openModal(imageSrc, personName) {
+function openModal(imageSrc, personName, linkedinUrl) {
   document.body.style.overflow = 'hidden';
   
   const modal = document.getElementById('imageModal');
@@ -116,6 +120,20 @@ function openModal(imageSrc, personName) {
   modalImage.src = imageSrc;
   modalImage.alt = personName;
   modalCaption.textContent = personName;
+  modalCaption.href = linkedinUrl || '#';
+  
+  // Add visual indication that it's clickable if LinkedIn URL is provided
+  if (linkedinUrl) {
+    modalCaption.style.cursor = 'pointer';
+    modalCaption.title = 'View LinkedIn Profile';
+    modalCaption.style.textDecoration = 'underline';
+    modalCaption.style.color = '#003A96'; 
+  } else {
+    modalCaption.style.cursor = 'default';
+    modalCaption.title = '';
+    modalCaption.style.textDecoration = 'none';
+    modalCaption.style.color = 'black';
+  }
   
   modal.style.display = 'block';
   setTimeout(() => {

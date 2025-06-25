@@ -30,6 +30,64 @@
       <h1 class="title">People</h1>
        <div class = divider>
       </div>
-      </div>
+<table>
+<tr>
+    <th>Name</th>
+    <th>Role at MGH</th>
+    <th>Affiliation</th>
+</tr>
+<tr>
+    <td><a href="#" onclick="openModal('Images/Madhav.jpeg', 'Madhav Krishna')">Madhav Krishna</a></td>
+    <td>Summer Student</td>
+    <td>UMass Amherst</td>
+</tr>
+<tr>
+    <td><a href="#" onclick="openModal('Images/Alex.jpg', 'Alex Jirayr Balikian')">Alex Jirayr Balikian</a></td>
+    <td>Summer Student</td>
+    <td>Tufts University</td>
+</tr>
+</table>
+
+<!-- Modal for image display -->
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <h3 id="modalCaption"></h3>
+  </div>
+</div>      </div>
+
+<script>
+function openModal(imageSrc, personName) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  
+  modalImage.src = imageSrc;
+  modalImage.alt = personName;
+  modalCaption.textContent = personName;
+  
+  modal.style.display = 'block';
+  setTimeout(() => {
+    modal.classList.add('show');
+  }, 10);
+}
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('show');
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 300);
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('imageModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+</script>
+
   </body>
 </html>

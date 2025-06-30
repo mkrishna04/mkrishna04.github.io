@@ -67,6 +67,96 @@
       <h2>Current Members</h2>
       <div class = divider>
       </div>
+<!-- Modal for image display -->
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+  </div>
+</div>
+  
+  <div class ="profile">
+  <img src="Images/Alex.webp" alt="Alex Balikian" onclick="openModal('Images/Alex.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Alex Balikian<p>
+  <p class="profile_desc">Summer Student, Tufts University, MA</p>
+  </div>
+</div>
+
+<div class ="profile">
+  <img src="Images/Bijan.webp" alt="Bijan Safee Fakhr" onclick="openModal('Images/Bijan.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Bijan Safee Fakhr, MD<p>
+  <p class="profile_desc">Anesthesiologist, University of Milan, Italy</p>
+  <details>
+  <summary>Professional Profiles</summary>
+  <ul>
+    <li><a href="https://www.massgeneral.org/doctors/23471/bijan-safaee-fakhr" target="_blank">MGH</a></li>
+    <li><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/193508" target="_blank">Harvard Catalyst</a></li>
+    <li><a href="https://www.researchgate.net/profile/Bijan-Safaee-Fakhr" target="_blank">Research Gate</a></li>
+<li><a href="https://www.linkedin.com/in/bijan-safaee-fakhr-ab47061b4" target="_blank">LinkedIn</a></li>
+  </ul>
+</details>
+  </div>
+</div>
+
+<div class ="profile">
+  <img src="Images/Bin.webp" alt="Bin Wang" onclick="openModal('Images/Bin.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Bin Wang, MD<p>
+  <p class="profile_desc">Research Fellow, University of Peking, China</p>
+  </div>
+</div>
+
+<div class ="profile">
+  <img src="Images/Elisa.webp" alt="Elisa Mereto" onclick="openModal('Images/Elisa.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Elisa Mereto, MD<p>
+  <p class="profile_desc">Research Fellow, University of Milan, Italy</p>
+  </div>
+</div>
+
+<div class ="profile">
+  <img src="Images/Florencia.webp" alt="Florencia Rodriguez" onclick="openModal('Images/Florencia.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Florencia Rodriguez<p>
+  <p class="profile_desc">Research Fellow, Universidad de la República, Uruguay</p>
+  </div>
+</div>
+
+<div class ="profile">
+    <img src="Images/Jonathan.webp" alt="Jonathan Thein" onclick="openModal('Images/Jonathan.webp')">
+    <div class = "profile_text">
+    <p class ="profile_name">Jonathan Thein<p>
+    <p class="profile_desc">Student, Tufts University Medical School, MA</p>
+    </div>
+</div>
+
+  <div class ="profile">
+    <img src="Images/Madhav.webp" alt="Madhav Krishna" onclick="openModal('Images/Madhav.webp')">
+    <div class = "profile_text">
+    <p class ="profile_name">Madhav Krishna<p>
+    <p class="profile_desc">Summer Student, UMass Amherst, MA</p>
+    </div>
+</div>
+
+
+<div class ="profile">
+  <img src="Images/Tommy.webp" alt="Tommy Lampert" onclick="openModal('Images/Tommy.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Tommy Lampert<p>
+  <p class="profile_desc">Summer Student, Miami University, Oxford, OH</p>
+  <details>
+  <summary>Professional Profiles</summary>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/tommy-lampert-86ab55317/" target="_blank">LinkedIn</a></li>
+  </ul>
+</details>
+  </div>
+</div>
+
+<div class="divider"></div>
+
 <details>
 <summary>Click to view current members</summary>
 <table>
@@ -97,72 +187,6 @@
 </tr>
 </table>
 </details>
-<!-- Modal for image display -->
-<div id="imageModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="" alt="">
-    <a id="modalCaption" href="" target="_blank"></a>
-  </div>
-</div>
-  <div class = divider></div>
-  
-  <div class ="profile">
-  <img src="Images/Alex.webp" alt="Alex Balikian" onclick="openModal('Images/Alex.webp')">
-  <div class = "profile_text">
-  <p class ="profile_name">Alex Balikian<p>
-  <p class="profile_desc">Summer Student, Tufts University, MA</p>
-  </div>
-</div>
-
-<div class ="profile">
-  <img src="Images/Bijan.webp" alt="Bijan Safee Fakhr" onclick="openModal('Images/Bijan.webp')">
-  <div class = "profile_text">
-  <p class ="profile_name">Bijan Safee Fakhr, MD<p>
-  <p class="profile_desc">Anesthesiologist, University of Milan, Italy</p>
-  <details>
-  <summary>Professional Profiles</summary>
-  <ul>
-    <li><a href="https://www.massgeneral.org/doctors/23471/bijan-safaee-fakhr" target="_blank">MGH</a></li>
-    <li><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/193508" target="_blank">Harvard Catalyst</a></li>
-    <li><a href="https://www.researchgate.net/profile/Bijan-Safaee-Fakhr" target="_blank">Research Gate</a></li>
-<li><a href="https://www.linkedin.com/in/bijan-safaee-fakhr-ab47061b4" target="_blank">LinkedIn</a></li>
-  </ul>
-</details>
-  </div>
-</div>
-
- <div class ="profile">
-  <img src="Images/Florencia.webp" alt="Florencia Rodriguez" onclick="openModal('Images/Florencia.webp')">
-  <div class = "profile_text">
-  <p class ="profile_name">Florencia Rodriguez<p>
-  <p class="profile_desc">Research Fellow, Universidad de la República, Uruguay</p>
-  </div>
-</div>
-
-  <div class ="profile">
-    <img src="Images/Madhav.webp" alt="Madhav Krishna" onclick="openModal('Images/Madhav.webp')">
-    <div class = "profile_text">
-    <p class ="profile_name">Madhav Krishna<p>
-    <p class="profile_desc">Summer Student, UMass Amherst, MA</p>
-    </div>
-</div>
-
-
-<div class ="profile">
-  <img src="Images/Tommy.webp" alt="Tommy Lampert" onclick="openModal('Images/Tommy.webp')">
-  <div class = "profile_text">
-  <p class ="profile_name">Tommy Lampert<p>
-  <p class="profile_desc">Summer Student, Miami University, Oxford, OH</p>
-  <details>
-  <summary>Professional Profiles</summary>
-  <ul>
-    <li><a href="https://www.linkedin.com/in/tommy-lampert-86ab55317/" target="_blank">LinkedIn</a></li>
-  </ul>
-</details>
-  </div>
-</div>
-
 </div>
 
 <script>

@@ -67,6 +67,8 @@
       <h2>Current Members</h2>
       <div class = divider>
       </div>
+<details>
+<summary>Click to view current members</summary>
 <table>
 <tr>
     <th>Name</th>
@@ -94,7 +96,7 @@
     <td>UMiami, Oxford, OH</td>
 </tr>
 </table>
-
+</details>
 <!-- Modal for image display -->
 <div id="imageModal" class="modal">
   <div class="modal-content">
@@ -104,36 +106,74 @@
   </div>
 </div>
   <div class = divider></div>
+  
+  <div class ="profile">
+  <img src="Images/Alex.webp" alt="Alex Balikian" onclick="openModal('Images/Alex.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Alex Balikian<p>
+  <p class="profile_desc">Summer Student, Tufts University, MA</p>
+  </div>
+</div>
 
+<div class ="profile">
+  <img src="Images/Bijan.webp" alt="Bijan Safee Fakhr" onclick="openModal('Images/Bijan.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Bijan Safee Fakhr, MD<p>
+  <p class="profile_desc">Anesthesiologist, University of Milan, Italy</p>
+  <details>
+  <summary>Professional Profiles</summary>
+  <ul>
+    <li><a href="https://www.massgeneral.org/doctors/23471/bijan-safaee-fakhr" target="_blank">MGH</a></li>
+    <li><a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/193508" target="_blank">Harvard Catalyst</a></li>
+    <li><a href="https://www.researchgate.net/profile/Bijan-Safaee-Fakhr" target="_blank">Research Gate</a></li>
+<li><a href="https://www.linkedin.com/in/bijan-safaee-fakhr-ab47061b4" target="_blank">LinkedIn</a></li>
+  </ul>
+</details>
+  </div>
+</div>
+
+ <div class ="profile">
+  <img src="Images/Florencia.webp" alt="Florencia Rodriguez" onclick="openModal('Images/Florencia.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Florencia Rodriguez<p>
+  <p class="profile_desc">Research Fellow, Universidad de la Re, Uruguay</p>
+  </div>
+</div>
+
+  <div class ="profile">
+    <img src="Images/Madhav.webp" alt="Madhav Krishna" onclick="openModal('Images/Madhav.webp')">
+    <div class = "profile_text">
+    <p class ="profile_name">Madhav Krishna<p>
+    <p class="profile_desc">Summer Student, UMass Amherst, MA</p>
+    </div>
 </div>
 
 
+<div class ="profile">
+  <img src="Images/Tommy.webp" alt="Tommy Lampert" onclick="openModal('Images/Tommy.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">Tommy Lampert<p>
+  <p class="profile_desc">Summer Student, Miami University, Oxford, OH</p>
+  <details>
+  <summary>Professional Profiles</summary>
+  <ul>
+    <li><a href="https://www.linkedin.com/in/tommy-lampert-86ab55317/" target="_blank">LinkedIn</a></li>
+  </ul>
+</details>
+  </div>
+</div>
+
+</div>
 
 <script>
-function openModal(imageSrc, personName, linkedinUrl) {
+function openModal(imageSrc) {
   document.body.style.overflow = 'hidden';
   
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
-  const modalCaption = document.getElementById('modalCaption');
   
   modalImage.src = imageSrc;
-  modalImage.alt = personName;
-  modalCaption.textContent = personName;
-  modalCaption.href = linkedinUrl || '#';
   
-  // Add visual indication that it's clickable if LinkedIn URL is provided
-  if (linkedinUrl) {
-    modalCaption.style.cursor = 'pointer';
-    modalCaption.title = 'View LinkedIn Profile';
-    modalCaption.style.textDecoration = 'underline';
-    modalCaption.style.color = '#003A96'; 
-  } else {
-    modalCaption.style.cursor = 'default';
-    modalCaption.title = '';
-    modalCaption.style.textDecoration = 'none';
-    modalCaption.style.color = 'black';
-  }
   
   modal.style.display = 'block';
   setTimeout(() => {

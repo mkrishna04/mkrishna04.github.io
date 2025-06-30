@@ -165,7 +165,7 @@ color: #009ca6;
 }
 
 table a:hover {
-  color:#003A96
+  color:#003A96;
 }    
 
 td, th {
@@ -178,6 +178,39 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  align-items: left;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.profile_text {
+  margin: 0px;
+}
+.profile_name {
+    font-size: 1.30rem;
+  color: black;
+  margin:0px;
+}
+.profile_desc {
+  font-size: 0.9rem;
+  color: grey;
+  font-weight: 400;
+  flex-wrap: nowrap;
+}
+.profile img {
+width: 20%;
+min-width: 100px; 
+  height: 20%; 
+  cursor: pointer;
+  border-color: rgba(0,0,0,0.1);
+  border-style: solid;
+  border-width: 1px;
+  
+}
 /* Modal styles */
 .modal {
   display: none;
@@ -207,6 +240,12 @@ tr:nth-child(even) {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+@media only screen and (max-width: 412px) {
+  .modal-content {
+    width: 90%;
+    margin-top:45%;
+  }
+}
 
 .modal.show .modal-content {
   opacity: 1;
@@ -233,21 +272,6 @@ tr:nth-child(even) {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
-}
-
-#modalCaption {
-  margin-top: 15px;
-  color: #003A96;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-decoration: none;
-  display: block;
-  transition: color 0.3s ease;
-}
-
-#modalCaption:hover {
-  color: #009ca6;
-  text-decoration: underline;
 }
 
 .slideshow-container {
@@ -334,4 +358,51 @@ tr:nth-child(even) {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+details {
+  margin: 0px;
+  padding: 3px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+summary:hover {
+  color: #003A96;
+  cursor: pointer;
+}
+
+summary {
+  color: black;
+  font-weight: 400;
+}
+
+details summary {
+    list-style-type: none;
+}
+
+details a {
+  text-decoration: none;
+  color: #009ca6;
+}
+
+details a:hover {
+  color: #003A96;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary::before {
+padding-right: 5px;
+    content: '+';
+    color: #009ca6;
+}
+
+details[open] summary::before {
+  padding-right: 9px;
+    content: '-';
+    color: #009ca6;
 }

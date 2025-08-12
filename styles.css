@@ -126,21 +126,52 @@ nav ul a:hover {
 .vid-title {
   white-space: pre-line;
   clear: both;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 0.5%;
 }
 
-.vid1, .vid2, .vid3 {
+.vid-title a {
+  color: black;
+  text-decoration: none;
+}
+
+.vid-title a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.resource {
   width:100%;
   height:315px;
   clear: both;
   margin-bottom: 10%;
 }
 
-.vid1 iframe, .vid2 iframe,.vid3 iframe {
+#embed-iframe {
   float:left;
   width: clamp(385px, 45%, 45%);
   height: clamp(445px, 45%, 45%);
 }
-.vid1-text, .vid2-text, .vid3-text {
+
+.youtube-iframe {
+  float:left;
+  width: clamp(373px, 45%, 690px);
+  height: clamp(227px, 100%, 389px);
+  border-radius: 10px;
+}
+
+audio {
+  float:left;
+  width: clamp(373px, 45%, 690px);
+  height: clamp(50px, 100%, 80px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.jove-text {
   width:50%;
   float:left;
   vertical-align: middle;
@@ -405,6 +436,11 @@ details[open] summary::before {
   padding-right: 9px;
     content: '-';
     color: #009ca6;
+}
+
+label {
+  font-size: 130%;
+  font-weight: 320;
 }
 
 input[type=text], select {

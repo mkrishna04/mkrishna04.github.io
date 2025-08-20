@@ -64,10 +64,9 @@
 </div>
 <br>
 
-      <h2>Current Members</h2>
-      <p><a href = "./People2.html">New Layout</a></p>
-      <div class = divider>
-      </div>
+      <h2>Our PIs</h2>
+      <div class = "divider"></div>
+
 <!-- Modal for image display -->
 <div id="imageModal" class="modal">
   <div class="modal-content">
@@ -75,6 +74,16 @@
     <img id="modalImage" src="" alt="">
   </div>
 </div>
+
+<div class = "PI_container">
+        <div class ="PI_profile">
+            <img src = "Images/Placeholder.webp" alt="PI Image" onclick="openModal('Images/Placeholder.webp')">
+            <div class = "PI_text">
+            <p class ="PI_name">Dr. Lorenzo Berra, MD</p>
+            <p class = "PI_desc">This is placeholder text about Dr. Berra's work</p>
+</div>
+<details name = "Lab_members">
+      <summary>Click to view current members of our lab!</summary>
   
   <div class ="profile">
   <img src="Images/Alex.webp" alt="Alex Balikian" onclick="openModal('Images/Alex.webp')">
@@ -130,7 +139,7 @@
   <div class = "profile_text">
   <p class ="profile_name">Glasiele Alcala<p>
   <p class="profile_desc">Research Fellow, University of São Paulo, Brazil</p>
-  <details>
+   <details>
   <summary>Professional Profiles</summary>
   <ul>
     <li><a href="www.linkedin.com/in/glasiele-alcala-6b07a4150" target="_blank">LinkedIn</a></li>
@@ -191,11 +200,8 @@
 </details>
   </div>
 </div>
-
-<div class="divider"></div>
-
 <details>
-<summary>Click to view current members</summary>
+<summary>Click to view past members</summary>
 <table>
 <tr>
     <th>Name</th>
@@ -223,6 +229,40 @@
     <td>UMiami, Oxford, OH</td>
 </tr>
 </table>
+</details>
+
+</details>
+</div>
+<div class = "PI_container">
+        <div class ="PI_profile">
+            <img src = "Images/Placeholder.webp" alt="PI Image" onclick="openModal('Images/Placeholder.webp')">
+            <div class = "PI_text">
+            <p class ="PI_name">Placeholder PI</p>
+            <p class = "PI_desc">This is placeholder text about Placeholder PI</p>
+</div>
+<details name = "Lab_members">
+      <summary>Click to view current members of our lab!</summary>
+
+<div class ="profile">
+  <img src="Images/Placeholder.webp" alt="A" onclick="openModal('Images/Placeholder.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">A<p>
+  <p class="profile_desc">Research Fellow</p>
+  </div>
+</div>
+
+<div class ="profile">
+  <img src="Images/Placeholder.webp" alt="B" onclick="openModal('Images/Placeholder.webp')">
+  <div class = "profile_text">
+  <p class ="profile_name">B<p>
+  <p class="profile_desc">Research Fellow</p>
+  </div>
+</div>
+
+      <details>
+<summary>Click to view past members</summary>
+      </details>
+
 </details>
 </div>
 
@@ -288,6 +328,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// Close nested details when parent details are closed
+document.addEventListener('DOMContentLoaded', function() {
+  const allDetails = document.querySelectorAll('details');
+  
+  allDetails.forEach(details => {
+    details.addEventListener('toggle', function() {
+      if (!this.open) {
+        // When a details element is closed, close all nested details within it
+        const nestedDetails = this.querySelectorAll('details');
+        nestedDetails.forEach(nested => {
+          nested.open = false;
+        });
+      }
+    });
+  });
+});
 </script>
 
   </body>

@@ -209,6 +209,53 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.PI_container {
+    min-height: 80px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+  .PI_profile {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PI_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-top: 10px;
+}
+
+.PI_name {
+  font-size: 1.3rem;
+  color: black;
+  margin:0px;
+  text-align: center;
+}
+
+.PI_desc {
+  font-size: 1rem;
+  color: grey;
+  font-weight: 400;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.PI_profile img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
 .profile {
   display: flex;
   flex-direction: row;
@@ -244,7 +291,10 @@ min-width: 100px;
 }
 /* Modal styles */
 .modal {
-  display: none;
+
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -264,6 +314,7 @@ min-width: 100px;
   margin: 5% auto;
   padding: 10px;
   width: 80%;
+  height: auto;
   max-width: 600px;
   background-color: white;
   border-radius: 8px;
@@ -301,6 +352,7 @@ min-width: 100px;
 
 #modalImage {
   max-width: 100%;
+  width:100%;
   height: auto;
   border-radius: 4px;
 }
@@ -333,7 +385,7 @@ min-width: 100px;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -436,6 +488,32 @@ details[open] summary::before {
   padding-right: 9px;
     content: '-';
     color: #009ca6;
+}
+
+/* Force nested summary tags to show + sign with higher specificity */
+details[open] details summary::before {
+  padding-right: 5px !important;
+  content: '+' !important;
+  color: #009ca6 !important;
+}
+
+details[open] details[open] summary::before {
+  padding-right: 9px !important;
+  content: '-' !important;
+  color: #009ca6 !important;
+}
+
+/* Ensure nested summary tags also show + sign */
+details details summary::before {
+  padding-right: 5px;
+  content: '+';
+  color: #009ca6;
+}
+
+details details[open] summary::before {
+  padding-right: 9px;
+  content: '-';
+  color: #009ca6;
 }
 
 label {

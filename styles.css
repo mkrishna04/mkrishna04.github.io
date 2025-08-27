@@ -253,9 +253,6 @@ tr:nth-child(even) {
   border-radius: 8px;
 }
 
-
-
-
 .profile {
   display: flex;
   flex-direction: row;
@@ -267,6 +264,7 @@ tr:nth-child(even) {
 
 .profile_text {
   margin: 0px;
+  
 }
 .profile_name {
     font-size: 1.30rem;
@@ -279,9 +277,18 @@ tr:nth-child(even) {
   font-weight: 400;
   flex-wrap: nowrap;
 }
+
+.research_desc {
+  font-size: 0.9rem;
+  color: darkslategrey;
+  font-style:italic;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
 .profile img {
 width: 20%;
-min-width: 100px; 
+min-width: 200px; 
   height: 20%; 
   cursor: pointer;
   border-color: rgba(0,0,0,0.1);
@@ -322,7 +329,7 @@ min-width: 100px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 500px) {
 
   .modal-content {
     width: 90%;
